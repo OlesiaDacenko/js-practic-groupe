@@ -37,12 +37,46 @@
  *? Напишіть цикл, який виводить у консоль
  *? всі непарні числа  від max до min  за спаданням
  */
-const max = 50;
-const min = 23;
+// const max = 50;
+// const min = 23;
 
-for (let i = max; i >= min; i--) {
-  // console.log(i);
-  if (i % 2 !== 0) {
-    console.log(i);
+// for (let i = max; i >= min; i--) {
+
+//   if (i % 2 !== 0) {
+//     console.log(i);
+//   }
+// }
+
+/**
+*? Напишіть код, який питає
+*? логін за допомогою prompt та логує результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Admin",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Canceled"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевірять так:
+*? Якщо введено пароль "Password",
+*? то вивести рядок "Вітаю"
+*? інакше виводить рядок "Невірний пароль!"
+ */
+
+let login = prompt("enter login");
+console.log(login);
+
+if (login === "Admin") {
+  let password = prompt("enter password");
+  if (password === "Password") {
+    alert("Вітаю");
+  } else {
+    alert("Невірний пароль!");
   }
+  // } else if (login === "" || login === null) {
+} else if (!login) {
+  alert("Canceled");
+} else {
+  alert("Я вас не знаю");
 }
