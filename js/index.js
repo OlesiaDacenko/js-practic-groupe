@@ -23,12 +23,26 @@
  70 === 01:10
  **/
 
-const num = prompt("Введіть кількість хвилин");
+// const num = prompt("Введіть кількість хвилин");
 
-const hours = String(Math.floor(num / 60)).padStart(2, 0);
+// const hours = String(Math.floor(num / 60)).padStart(2, 0);
 
-// const min = num - hours * 60
+// // const min = num - hours * 60
 
-const min = String(num % 60).padStart(2, 0);
+// const min = String(num % 60).padStart(2, 0);
 
-console.log(`${hours}:${min}`);
+// console.log(`${hours}:${min}`);
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі непарні числа  від max до min  за спаданням
+ */
+const max = 50;
+const min = 23;
+
+for (let i = max; i >= min; i--) {
+  // console.log(i);
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
