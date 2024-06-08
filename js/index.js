@@ -105,19 +105,39 @@
 
 // alert(`Загальна сума введених чисел дорівнює ${total}.`);
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
-const someObj = {
-  worker1: 360,
-  worker2: 750,
-  worker3: 240,
-};
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
 
-function totalSelery(obj) {
-    let sum = 0;
-    const arr = Object.values(obj);
-    for (const item of arr) {
-      sum += item;
-    }
-    return sum;
+// function totalSelery(obj) {
+//   let sum = 0;
+//   const arr = Object.values(obj);
+//   for (const item of arr) {
+//     sum += item;
+//   }
+//   return sum;
+// }
+
+// console.log(totalSelery(someObj));
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+const arr = ["best", "the", "foo", "is", "js"];
+
+const copyArr = [...arr];
+
+const index = copyArr.indexOf("fooy");
+
+if (index !== -1) {
+  copyArr.splice(index, 1);
 }
 
-console.log(totalSelery(someObj));
+copyArr.reverse();
+
+const string = copyArr.join(" ");
+console.log(string);
+console.log(arr);
