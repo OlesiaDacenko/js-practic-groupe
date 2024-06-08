@@ -94,13 +94,30 @@
  *! а не довільний набір символів не потрібно.
  */
 
-let num = prompt("Enter number");
+// let num = prompt("Enter number");
 
-let total = 0;
+// let total = 0;
 
-while (num !== null) {
-  total += Number(num);
-  num = prompt("Enter number");
+// while (num !== null) {
+//   total += Number(num);
+//   num = prompt("Enter number");
+// }
+
+// alert(`Загальна сума введених чисел дорівнює ${total}.`);
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+const someObj = {
+  worker1: 360,
+  worker2: 750,
+  worker3: 240,
+};
+
+function totalSelery(obj) {
+    let sum = 0;
+    const arr = Object.values(obj);
+    for (const item of arr) {
+      sum += item;
+    }
+    return sum;
 }
 
-alert(`Загальна сума введених чисел дорівнює ${total}.`);
+console.log(totalSelery(someObj));
